@@ -1,0 +1,96 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "name" : "Azhi Muahnaf Rais",
+  "email" : "azhi@gmail.com",
+  "password": "123456",
+  "confPassword": "123456",
+  "role": "user"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+// get Single Users
+GET http://localhost:5000/users/2f9bf491-04a3-45af-b7b6-7b7f1e25019d
+
+###
+// Update a User
+PATCH  http://localhost:5000/users/2f9bf491-04a3-45af-b7b6-7b7f1e25019d
+Content-Type: application/json
+
+{
+  "name" : "Azhi Muahnaf Rais Updated",
+  "email" : "azhi@gmail.com",
+  "password": "",
+  "confPassword": "",
+  "role": "user"
+}
+
+###
+//Delete a User
+DELETE http://localhost:5000/users/2f9bf491-04a3-45af-b7b6-7b7f1e25019d
+
+###
+// Login ADMIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email" : "admin@gmail.com",
+  "password": "123456"
+}
+
+###
+// Login USER
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email" : "azhi@gmail.com",
+  "password": "123456"
+}
+
+###
+// me
+GET http://localhost:5000/me
+
+###
+//logout
+DELETE http://localhost:5000/logout
+
+###
+// Get All Products
+GET http://localhost:5000/products
+
+###
+// Get One Products
+GET http://localhost:5000/products/7a3e6414-a8f8-45d3-ba1c-e85c0411165c
+
+###
+// Create Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+  "name" : "Product 6",
+  "price": "6000"
+}
+
+###
+// Update Product
+PATCH  http://localhost:5000/products/7a3e6414-a8f8-45d3-ba1c-e85c0411165c
+Content-Type: application/json
+
+{
+  "name" : "Product Updated",
+  "price": "6000"
+}
+
+###
+// hapus Product
+DELETE http://localhost:5000/products/82641bbd-fd6c-4609-8472-5a23fcc5b694
